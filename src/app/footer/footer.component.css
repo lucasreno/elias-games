@@ -1,0 +1,44 @@
+footer{
+    background-color: #eaf2fd;
+}
+
+.logo{
+    color: #575757;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.logo svg{
+    width: 35px;
+    height: 35px;
+    color: #219ebc;
+}
+.logo span{
+    color: #219ebc;
+}
+
+footer li {
+    list-style: none;
+    margin: 15px 0;
+}
+footer a {
+    text-decoration: none;
+    color: #555;  
+}
+footer a:hover {
+    color: #000;
+}
+textarea{
+    height: 90px !important;
+}
+.btn-footer{
+    background-color: #219ebc;
+    color: #fff;
+    border: 1px solid #219ebc;
+    padding: 10px 15px;
+}
+.btn-footer:hover{
+    background-color: #fff;
+    color: #219ebc;
+    border: 1px solid #219ebc;
+    transition: 0.4s;
+}
