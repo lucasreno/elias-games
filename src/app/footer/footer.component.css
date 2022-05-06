@@ -32,13 +32,11 @@ textarea{
 }
 .btn-footer{
     background-color: #219ebc;
-    color: #fff;
     border: 1px solid #219ebc;
+    color: #fff;
     padding: 10px 15px;
+    transition: 0.2s;
 }
 .btn-footer:hover{
-    background-color: #fff;
-    color: #219ebc;
-    border: 1px solid #219ebc;
-    transition: 0.4s;
+    background-color: #42b9d7;
 }
