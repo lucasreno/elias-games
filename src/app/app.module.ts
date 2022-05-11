@@ -10,6 +10,7 @@ import { ProdutoComponent } from './pages/produto/produto.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { CaixinhaComponent } from './caixinha/caixinha.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     LoginComponent,
     ProdutoComponent,
     CatalogoComponent,
-    AddProdutoComponent
+    AddProdutoComponent,
+    CaixinhaComponent
   ],
   imports: [
     BrowserModule,
