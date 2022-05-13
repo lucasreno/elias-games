@@ -11,6 +11,7 @@ import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { CaixinhaComponent } from './caixinha/caixinha.component';
+import { CaixinhaEdicaoComponent } from './caixinha-edicao/caixinha-edicao.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CaixinhaComponent } from './caixinha/caixinha.component';
     ProdutoComponent,
     CatalogoComponent,
     AddProdutoComponent,
-    CaixinhaComponent
+    CaixinhaComponent,
+    CaixinhaEdicaoComponent
   ],
   imports: [
     BrowserModule,
