@@ -12,15 +12,15 @@
     </div>
 </div>
 
-<div class="container my-5" *ngFor="let i of [1,2,3]">
+<div class="container my-5" *ngFor="let categoria of categorias">
     <div class="d-flex 
                 align-items-center justify-content-between">
-        <h4>Star Wars</h4>
+        <h4>{{categoria.nome}}</h4>
         <a href="">Ver tudo -></a>
     </div>
     <div class="d-flex justify-content-between">
-        <div *ngFor="let produto of produtos">
-            <app-caixinha nomeProduto="{{produto}}"></app-caixinha>
+        <div *ngFor="let produto of categoria.produtos">
+            <app-caixinha [prod]="produto"></app-caixinha>
         </div>
     </div>
 </div>

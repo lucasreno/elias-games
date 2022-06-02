@@ -1,5 +1,14 @@
+.limite{
+    max-width: 170px;
+}
+
 .quadrado{
     height: 170px;
     width: 170px;
-    background-color: #000;
+    background-color: #ccc;
+}
+
+.quadrado img{
+    width: 100%;
+    height: 100%;
 }

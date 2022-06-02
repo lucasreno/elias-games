@@ -1,4 +1,8 @@
-<div class="quadrado"></div>
-<p class="m-0">{{ nomeProduto }}</p>
-<p class="m-0 fw-bolder">R$ 60,00</p>
-<a href="">Ver produto</a>
+<div class="limite">
+    <div class="quadrado">
+        <img src="{{prod.imagem}}" alt="">
+    </div>
+    <p class="m-0">{{ prod.nome }}</p>
+    <p class="m-0 fw-bolder">{{ prod.preco | currency: 'BRL' }}</p>
+    <a href="">Ver produto</a>
+</div>
