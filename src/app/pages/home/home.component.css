@@ -10,3 +10,13 @@
     background-size: cover;
     background-blend-mode: overlay;
 }
+
+.ver-tudo{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ver-tudo svg{
+    margin-left: 5px;
+    margin-top: -3px;
+}
