@@ -10,7 +10,7 @@ import { AddProdutoComponent } from '../pages/add-produto/add-produto.component'
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'produto', component: ProdutoComponent},
+  {path: 'produto/:id', component: ProdutoComponent},
   {path: 'login', component: LoginComponent},
   {path: 'catalogo', component: CatalogoComponent},
   {path: 'cadastrar-produto', component: AddProdutoComponent}
