@@ -1,30 +1,36 @@
 <div class="container-fluid bg-light py-5">
     <div class="col-5 mx-auto py-5">
         <h4 class="mb-3 fw-bold">Adicionar novo produto</h4>
-        <div class="form-floating mb-3 text-secondary">
-            <input type="text" class="form-control rounded-0 border-0 border-bottom" id="imagem"
-                placeholder="URL da imagem">
-            <label for="imagem">URL da imagem</label>
-        </div>
-        <div class="form-floating mb-3 text-secondary">
-            <input type="text" class="form-control rounded-0 border-0 border-bottom" id="categoria"
-                placeholder="Categoria">
-            <label for="categoria">Categoria</label>
-        </div>
-        <div class="form-floating mb-3 text-secondary">
-            <input type="text" class="form-control rounded-0 border-0 border-bottom" id="produto"
-                placeholder="Nome do produto">
-            <label for="produto">Nome do produto</label>
-        </div>
-        <div class="form-floating mb-3 text-secondary">
-            <input type="number" class="form-control rounded-0 border-0 border-bottom" id="preco"
-                placeholder="Preço do produto">
-            <label for="preco">Preço do produto</label>
-        </div>
-        <div class="form-floating mb-3 text-secondary">
-            <textarea class="form-control rounded-0 border-0 border-bottom" id="descricao" placeholder="Descrição do produto"></textarea>
-            <label for="descricao">Descrição do produto</label>
-        </div>
-        <button routerLink="/catalogo" class="btn btn-primary w-100 py-3 rounded-0">Adicionar produto</button>
+        <form [formGroup]="form" (ngSubmit)="enviarDados()">
+            <div class="form-floating mb-3 text-secondary">
+                <input formControlName="url" type="text" class="form-control rounded-0 border-0 border-bottom" id="imagem"
+                    placeholder="URL da imagem">
+                <label for="imagem">URL da imagem</label>
+            </div>
+            <div class="form-floating mb-3 text-secondary">
+                <select formControlName="categoria" id="categoria" class="form-select rounded-0 border-0 border-bottom">
+                    <option *ngFor="let c of categorias" value="{{c.idCategoria}}">
+                        {{c.nome}}
+                    </option>
+                </select>
+                <label for="categoria">Categoria</label>
+            </div>
+            <div class="form-floating mb-3 text-secondary">
+                <input formControlName="nome" type="text" class="form-control rounded-0 border-0 border-bottom" id="produto"
+                    placeholder="Nome do produto">
+                <label for="produto">Nome do produto</label>
+            </div>
+            <div class="form-floating mb-3 text-secondary">
+                <input formControlName="preco" type="number" class="form-control rounded-0 border-0 border-bottom" id="preco"
+                    placeholder="Preço do produto">
+                <label for="preco">Preço do produto</label>
+            </div>
+            <div class="form-floating mb-3 text-secondary">
+                <textarea formControlName="descricao" class="form-control rounded-0 border-0 border-bottom" id="descricao"
+                    placeholder="Descrição do produto"></textarea>
+                <label for="descricao">Descrição do produto</label>
+            </div>
+            <button class="btn btn-primary w-100 py-3 rounded-0">Adicionar produto</button>
+        </form>
     </div>
 </div>

@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { Produto } from '../interface/produto';
 
 @Component({
   selector: 'app-caixinha-edicao',
@@ -6,10 +8,22 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./caixinha-edicao.component.css']
 })
 export class CaixinhaEdicaoComponent implements OnInit {
-  @Input() nomeProduto: string = '';
-  constructor() { }
+  @Input() prod: Produto = {
+    idProduto: 0,
+    idCategoria: 0,
+    nome: '',
+    descricao: '',
+    preco: 0,
+    imagem: ''
+  };
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+  }
+
+  excluirProduto(idProduto: number){
+    const url = "http://lucasreno.kinghost.net/loja/produto/" + idProduto;
+    this.http.delete(url).subscribe();
   }
 
 }

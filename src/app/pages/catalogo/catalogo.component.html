@@ -7,12 +7,7 @@
             </button>
         </div>
         <div class="d-flex justify-content-between mt-5">
-            <app-caixinha-edicao nomeProduto="Produto XYZ"></app-caixinha-edicao>
-            <app-caixinha-edicao nomeProduto="Produto XYZ"></app-caixinha-edicao>
-            <app-caixinha-edicao nomeProduto="Produto XYZ"></app-caixinha-edicao>
-            <app-caixinha-edicao nomeProduto="Produto XYZ"></app-caixinha-edicao>
-            <app-caixinha-edicao nomeProduto="Produto XYZ"></app-caixinha-edicao>
-            <app-caixinha-edicao nomeProduto="Produto XYZ"></app-caixinha-edicao>
+            <app-caixinha-edicao *ngFor="let p of produtos" [prod]="p"></app-caixinha-edicao>
         </div>
     </div>
 </div>
