@@ -2,12 +2,14 @@
     <div class="container">
         <div class="d-flex align-items-center justify-content-between">
             <h3 class="m-0">Todos os produtos</h3>
-            <button routerLink="/cadastrar-produto" class="btn btn-primary rounded-0 px-4 py-2">
+            <button routerLink="/cadastrar-produto" class="btn btn-custom rounded-0 px-4 py-2">
                 Adicionar produto
             </button>
         </div>
         <div class="d-flex justify-content-between mt-5">
-            <app-caixinha-edicao *ngFor="let p of produtos" [prod]="p"></app-caixinha-edicao>
+            <div class="row">
+                <app-caixinha-edicao *ngFor="let p of produtos" class="col-2 mb-2" [prod]="p"></app-caixinha-edicao>
+            </div>
         </div>
     </div>
 </div>

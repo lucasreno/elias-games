@@ -1,7 +1,9 @@
 <div class="container-fluid bg-light py-5">
     <div class="col-5 mx-auto py-5">
-        <h4 class="mb-3 fw-bold">Adicionar novo produto</h4>
+        <h4 class="mb-3 fw-bold" *ngIf="produto.idProduto == 0">Adicionar novo produto</h4>
+        <h4 class="mb-3 fw-bold" *ngIf="produto.idProduto != 0">Editar produto</h4>
         <form [formGroup]="form" (ngSubmit)="enviarDados()">
+            <input type="hidden" formControlName="id">
             <div class="form-floating mb-3 text-secondary">
                 <input formControlName="url" type="text" class="form-control rounded-0 border-0 border-bottom" id="imagem"
                     placeholder="URL da imagem">
@@ -30,7 +32,7 @@
                     placeholder="Descrição do produto"></textarea>
                 <label for="descricao">Descrição do produto</label>
             </div>
-            <button class="btn btn-primary w-100 py-3 rounded-0">Adicionar produto</button>
+            <button class="btn btn-custom w-100 py-3 rounded-0">Salvar produto</button>
         </form>
     </div>
 </div>
